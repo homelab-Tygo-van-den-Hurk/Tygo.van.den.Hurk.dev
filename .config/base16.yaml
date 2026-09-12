@@ -1,0 +1,37 @@
+# The colors of this site.
+
+# From ${nixpkgs#base16-schemes}/share/themes/catppuccin-*.yaml 
+light: # latte
+  base00: "#eff1f5" # base
+  base01: "#ccd0da" # surface0
+  base02: "#bcc0cc" # surface1
+  base03: "#9ca0b0" # overlay0
+  base04: "#6c6f85" # subtext0
+  base05: "#4c4f69" # text
+  base06: "#c8897d" # rosewater
+  base07: "#8994d0" # lavender
+  base08: "#b84a61" # red
+  base09: "#d88955" # peach
+  base0A: "#c5964b" # yellow
+  base0B: "#659858" # green
+  base0C: "#57979b" # teal
+  base0D: "#5278c5" # blue
+  base0E: "#8866c0" # mauve
+  base0F: "#c78484" # flamingo
+dark: # frappe
+  base00: "#303446" # base
+  base01: "#414559" # surface0
+  base02: "#51576d" # surface1
+  base03: "#737994" # overlay0
+  base04: "#a5adce" # subtext0
+  base05: "#c6d0f5" # text
+  base06: "#f0b8ad" # rosewater
+  base07: "#a5a9e8" # lavender
+  base08: "#e56b72" # red
+  base09: "#f09265" # peach
+  base0A: "#e0bd72" # yellow
+  base0B: "#91c76f" # green
+  base0C: "#6fc1b5" # teal
+  base0D: "#789ee8" # blue
+  base0E: "#b98bdd" # mauve
+  base0F: "#e9a5a5" # flamingo

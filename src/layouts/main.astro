@@ -1,0 +1,96 @@
+---
+import '#src/styles/global.css';
+import Footer from '#src/components/footer.astro';
+import Header from '#src/components/header.astro';
+import HeadShot from '#repo/public/head-shot.jpg';
+import { getImage } from 'astro:assets';
+
+/** The properties The `Layout` accepts. */
+export interface Props {
+    /** CSS class names to add to the main container as well */
+    class?: string;
+    /** The title of the page. */
+    title?: string;
+    /** The description of the page. */
+    description?: string;
+    /** Whether to show the header. */
+    header?: boolean;
+    /** Whether to show the footer. */
+    footer?: boolean;
+}
+
+const { 
+    class: classNames = '',
+    title = 'Tygo van den Hurk',
+    description = 'This is my personal website.',
+    header = true,
+    footer = true,
+} = Astro.props as Props;
+
+const mkFavicon = async function mkFavicon(size: number, format: string) {
+  return getImage({
+    position: 'top',
+    src: HeadShot,
+    width: size,
+    height: size,
+    fit: 'cover',
+    format,
+  });
+}
+
+const favicon = {
+  png: {
+    small: await mkFavicon(16, 'png'),
+    medium: await mkFavicon(32, 'png'),
+    large: await mkFavicon(64, 'png'),
+  },
+  webp: {
+    small: await mkFavicon(16, 'webp'),
+    medium: await mkFavicon(32, 'webp'),
+    large: await mkFavicon(64, 'webp'),
+  },
+  avif: {
+    small: await mkFavicon(16, 'avif'),
+    medium: await mkFavicon(32, 'avif'),
+    large: await mkFavicon(64, 'avif'),
+  },
+};
+
+---
+
+<!doctype html>
+<html lang='en' class='w-screen h-screen overflow-hidden'>
+    <head class='hidden'>
+        <title>{title}</title>
+        <meta charset='utf-8' />
+        <meta name='darkreader-lock'>
+        <meta name='description' content={description} />
+        <meta name='viewport' content='width=device-width' />
+        <meta name='generator' content={Astro.generator} />
+        <meta name="build-time" content={(new Date(Date.now())).toUTCString()}>
+        <link rel='stylesheet' href='/base16.css' />
+        <link rel='stylesheet' href='/fonts/old-standard-tt/font.css'>
+        <link rel='stylesheet' href='/fonts/source-serif-pro/font.css'>
+        <link rel="icon" sizes="16x16" type="image/avif" href={favicon.avif.small.src} />
+        <link rel="icon" sizes="32x32" type="image/avif" href={favicon.avif.medium.src} />
+        <link rel="icon" sizes="64x64" type="image/avif" href={favicon.avif.large.src} />
+        <link rel="icon" sizes="16x16" type="image/webp" href={favicon.webp.small.src} />
+        <link rel="icon" sizes="32x32" type="image/webp" href={favicon.webp.medium.src} />
+        <link rel="icon" sizes="64x64" type="image/webp" href={favicon.webp.large.src} />
+        <link rel="icon" sizes="16x16" type="image/png" href={favicon.png.small.src} />
+        <link rel="icon" sizes="32x32" type="image/png" href={favicon.png.medium.src} />
+        <link rel="icon" sizes="64x64" type="image/png" href={favicon.png.large.src} />
+    </head>
+    <body class:list={[
+      'w-screen h-screen overflow-x-hidden scrollbar-none flex flex-col bg-base01 text-base04 font-body',
+      `transition-all duration-200 ${classNames}`,
+    ]}>
+        {header && <Header />}
+        <div class="bg-base00 flex-1">
+          <main class='h-full w-[90%] max-w-4xl mx-auto'>
+              <slot />
+          </main>
+        </div>
+        {footer && <Footer />}
+    </body>
+</html>

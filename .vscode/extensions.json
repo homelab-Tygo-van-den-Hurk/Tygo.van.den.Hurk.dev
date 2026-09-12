@@ -1,0 +1,7 @@
+{
+    "unwantedRecommendations": [],
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "astro-build.astro-vscode",
+    ],
+}

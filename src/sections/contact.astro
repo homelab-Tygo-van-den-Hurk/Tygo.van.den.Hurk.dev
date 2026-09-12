@@ -1,0 +1,44 @@
+---
+import Section from '#src/components/section.astro';
+export interface Props { class?: string; }
+---
+<Section id='contact' title='contact' class={Astro.props.class}>
+  <p class="mx-auto w-fit text-justify">
+    I'm always down for collaboration, or a new project. You can reach me using
+    the following contact form. You can also find me on <a
+    class='hover:underline text-base0D hover:text-base07 transition-all duration-200'
+    href="https://redirects.tygo.van.den.hurk.dev/linkedin">Linkedin</a>, or <a
+    class='hover:underline text-base0D hover:text-base07 transition-all duration-200'
+    href="https://redirects.tygo.van.den.hurk.dev/github/personal">GitHub</a>.
+  </p>
+  <form class="md:grid grid-cols-2 p-4 gap-12"
+    method="POST" action="https://formspree.io/f/xanoylwn">
+    <div>
+      <label for="email" class="block text-center w-full mt-6 mb-1">
+        Email
+      </label>
+      <input name="email" autocomplete="email" type="email" required
+        placeholder="o.w.kenobi@www.temple.jedi"
+        class="bg-base01 p-2 w-full rounded-md border border-base02 text-center"
+      />
+      <label for="subject" class="block text-center w-full mt-6 mb-1">
+        Subject
+      </label>
+      <input name="subject" type="text" 
+        placeholder="I have the high ground" required 
+        class="bg-base01 p-2 w-full rounded-md border border-base02 text-center"
+      />   
+    </div>
+    <div>
+      <label for="message"
+      class="block text-center w-full mt-6 mb-1">
+        Message
+      </label>
+      <textarea name="message" required
+        class="bg-base01 p-2 w-full rounded-md border border-base02 min-h-32"
+        placeholder=`Hello there...
+
+It's over Anakin. I have the high ground.`/>
+    </div> 
+  </form>
+</Section>

@@ -1,0 +1,18 @@
+- repo: Slyde
+  user: Tygo-van-den-Hurk
+  desc: >
+    An application to turn XML and a custom markup language into beautifully
+    animated presentations. Includes plugin support for adding custom
+    components, or markup languages.
+- repo: QMix
+  user: Tygo-van-den-Hurk
+  desc: >
+    A Nix library for making QMK firmware derivations. It turns QMK
+    configurations into reproducible Nix derivations, handling the QMK source,
+    toolchain, configuration, compilation, through the Nix build system.
+- repo: NixOS
+  user: Tygo-van-den-Hurk
+  desc: >
+    My configuration of my favorite Linux distro. It allows for total
+    replication of a machine, and enables declarative control over all
+    installed packages, services and more.

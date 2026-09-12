@@ -1,0 +1,33 @@
+tools:
+  - Git
+  - Nix
+  - Containerization
+  - Linux
+  - (RT)OSes
+  - POSIX shells
+  - Cloudflare Workers
+  - ESP32
+  - Node.js
+  - Astro
+  - KiCad
+
+skills:
+  - Embedded Systems
+  - Real-Time Systems
+  - Concurrency
+  - Operating Systems
+  - CI/CD
+  - Unit testing
+  - Documentation
+  - PCB design
+  - Functional Programming
+  - Object Oriented Programming
+
+languages:
+  - Rust
+  - TypeScript
+  - Nix
+  - Shell Script
+  - Java
+  - C
+  - Python

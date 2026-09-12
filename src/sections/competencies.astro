@@ -1,0 +1,101 @@
+---
+import Section from '#src/components/section.astro';
+import { Competencies as Config } from '#src/config';
+
+export interface Props {
+  class?: string;
+}
+---
+
+<Section id="competencies" title="Competencies" class={Astro.props.class}>
+  <p class="mx-auto w-fit text-justify">
+    These are the competencies I've acquired with my projects and experience:
+  </p>
+
+  <style>
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+  <div class="mt-4 overflow-hidden relative">
+    <div class="overflow-hidden"
+    style={`--animation-time:${20 * Config.config.skills.length}s`}>
+      <div class="flex w-max animate-[marquee_var(--animation-time)_linear_infinite]">
+        <ul class="flex w-max shrink-0">
+          {
+            Config.config.skills.map(name => (
+              <li class="z-0 shrink-0 border border-base04 p-2 transition-all duration-150 hover:z-10 hover:scale-105 hover:bg-base05 hover:text-base00">
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+        <ul class="flex w-max shrink-0" aria-hidden="true">
+          {
+            Config.config.skills.map(name => (
+              <li class="z-0 shrink-0 border border-base04 p-2 transition-all duration-150 hover:z-10 hover:scale-105 hover:bg-base05 hover:text-base00">
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="overflow-hidden"
+    style={`--animation-time:${16 * Config.config.tools.length}s`}>
+      <div style="animation-direction: reverse"
+      class="flex w-max animate-[marquee_var(--animation-time)_linear_infinite]">
+        <ul class="flex w-max shrink-0">
+          {
+            Config.config.tools.map(name => (
+              <li class="z-0 shrink-0 border border-base04 p-2 transition-all duration-150 hover:z-10 hover:scale-105 hover:bg-base05 hover:text-base00">
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+        <ul class="flex w-max shrink-0" aria-hidden="true">
+          {
+            Config.config.tools.map(name => (
+              <li class="z-0 shrink-0 border border-base04 p-2 transition-all duration-150 hover:z-10 hover:scale-105 hover:bg-base05 hover:text-base00">
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="overflow-hidden"
+    style={`--animation-time:${24 * Config.config.languages.length}s`}>
+      <div class="flex w-max animate-[marquee_var(--animation-time)_linear_infinite]">
+        <ul class="flex w-max shrink-0">
+          {
+            Config.config.languages.map(name => (
+              <li class="z-0 shrink-0 border border-base04 p-2 transition-all duration-150 hover:z-10 hover:scale-105 hover:bg-base05 hover:text-base00">
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+        <ul class="flex w-max shrink-0" aria-hidden="true">
+          {
+            [...Config.config.languages, ...Config.config.languages].map(name => (
+              <li class="z-0 shrink-0 border border-base04 p-2 transition-all duration-150 hover:z-10 hover:scale-105 hover:bg-base05 hover:text-base00">
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="pointer-events-none absolute inset-y-0 -left-3 w-16 bg-linear-to-r from-base00 from-30% to-transparent" />
+    <div class="pointer-events-none absolute inset-y-0 -right-3 w-16 bg-linear-to-l from-base00 from-30% to-transparent" />
+  </div>
+</Section>

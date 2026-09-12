@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Extra Breakpoints */
+  --breakpoint-xs: 400px;
+
+  /* New colors base00 to base0F */
+  --color-base00: var(--base00);    
+  --color-base01: var(--base01);    
+  --color-base02: var(--base02);    
+  --color-base03: var(--base03);    
+  --color-base04: var(--base04);    
+  --color-base05: var(--base05);    
+  --color-base06: var(--base06);    
+  --color-base07: var(--base07);    
+  --color-base08: var(--base08);    
+  --color-base09: var(--base09);    
+  --color-base0A: var(--base0A);    
+  --color-base0B: var(--base0B);    
+  --color-base0C: var(--base0C);    
+  --color-base0D: var(--base0D);    
+  --color-base0E: var(--base0E);    
+  --color-base0F: var(--base0F);
+
+  /* New Fonts for headers and the body */
+  --font-headers: "Old Standard TT", serif;
+  --font-body: "Source Serif 4", serif;
+
+  /* Overriding the base sizes for fonts */
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3rem;
+  --text-5xl: 3.75rem;
+  --text-6xl: 4.5rem;
+}

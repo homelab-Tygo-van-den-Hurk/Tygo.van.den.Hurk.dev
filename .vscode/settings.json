@@ -1,29 +1,75 @@
 {
     "cSpell.words": [
+        "Amac",
+        "Areo",
         "behance",
+        "Brandsma",
+        "catppuccin",
         "cloudflare",
+        "darkreader",
+        "Emmaus",
+        "emph",
         "gitea",
         "github",
         "GITHUB",
         "gitlab",
+        "Heesch",
+        "homelab",
         "htdocs",
+        "hurk",
         "leetcode",
+        "Libertinus",
         "linkedin",
-        "Linkedin",
         "middot",
+        "myriaddreamin",
         "nixpkgs",
         "nodemon",
+        "pagebreak",
         "proxymesh",
+        "restocker",
+        "Slyde",
         "stackoverflow",
         "tailwindcss",
         "tvdh",
         "tygo",
-        "typst",
-        "Typst"
+        "typst"
     ],
-    "yaml.schemas": {
-        "http://localhost:5500/schemas/v1.json": [
-            "curriculum-vitae.yaml",
-        ]
-    }
+    
+    "editor.detectIndentation": false,
+
+    "[css]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+
+    "[svg]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+
+    "[astro]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+    
+    
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+
+    "[json]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
 }

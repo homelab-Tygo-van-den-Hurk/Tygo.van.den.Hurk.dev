@@ -1,46 +1,37 @@
 {
-  "name": "personal-website",
+  "name": "tygo-van-den-Hurk-dev",
   "version": "1.0.0",
   "description": "This is my personal website, which can be found at 'Tygo.van.den.Hurk.dev'",
   "author": "Tygo van den Hurk <91738110+Tygo-van-den-Hurk@users.noreply.github.com>",
-  "main": "dist/index.js",
   "type": "module",
-  "imports": {
-    "#source/*": "./dist/*"
-  },
+  "private": true,
   "scripts": {
-    "dev": "npm run watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ts": "tsc",
-    "build:css": "npx tailwindcss --config ./tailwind.config.ts --input ./tailwind.input.css --output ./tailwind.output.css",
-    "build:pages": "node ./dist/pages/index.js",
-    "build:documents": "node ./dist/documents/index.js",
-    "build:typst": "typst compile main.typ curriculum-vitae.pdf",
-    "build": "npm run build:ts && npm run build:css && npm run build:pages && npm run build:documents && npm run build:typst",
-    "watch:pages": "nodemon --exec 'npm run build:ts && npm run build:css && npm run build:pages'",
-    "watch:documents": "nodemon --exec 'npm run build:ts && npm run build:css && npm run build:pages'",
-    "watch": "nodemon --exec 'npm run build'"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
-    "url": "github.com:homelab-Tygo-van-den-Hurk/personal-website"
+    "url": "github.com:homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   },
   "dependencies": {
-    "date-fns": "^4.1.0",    
-    "yaml": "^2.8.2",
-    "zod": "^3.25.65",
-    "zod-to-json-schema": "^3.25.1"
+    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.1",
+    "date-fns": "^4.4.0",
+    "pdf-lib": "^1.17.1",
+    "tailwindcss": "^4.3.3",
+    "yaml": "^2.9.0",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
-    "@types/node": "^25.0.10",
-    "nodemon": "^3.1.11",
-    "typescript": "^5.9.3",
-    "tailwindcss": "^3.4.19"
+    "@types/node": "^26.4.1"
   },
-  "nodemonConfig": {
-    "verbose": true,
-    "ignore": "**/dist,**/node_modules,**/*.html",
-    "watch": "src/**/*.*",
-    "exec": "npm run build || exit 1"
+  "allowScripts": {
+    "esbuild": true
   }
 }

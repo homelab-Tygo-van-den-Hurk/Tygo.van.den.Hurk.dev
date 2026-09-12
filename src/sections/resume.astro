@@ -1,0 +1,49 @@
+---
+import Section from '#src/components/section.astro';
+import Entry from '#src/components/entry.astro';
+import { Education, Career } from '#src/config';
+
+export interface Props { class?: string; };
+---
+<Section id='resume' title='Resume' class={Astro.props.class}>
+  <p class='mx-auto w-fit text-justify'>
+    You can also <a
+    class='hover:underline text-base0D hover:text-base07 transition-all duration-200'
+    href='/curriculum-vitae.pdf'>download my resume</a> as a PDF document. The time
+    span is updated weekly.
+  </p>
+  <div class='md:grid grid-cols-2 gap-4' id='entries'>
+    <div class="mx-auto w-fit mt-12 md:mt-0">
+      <h3 class='text-base05 text-2xl font-bold font-headers mt-5 mb-1 text-center'>
+        Experience
+      </h3>
+      <ul class="relative before:absolute before:-left-px before:top-3.5 before:bottom-20 before:w-px before:bg-base02">
+        {...Career.config.filter(entry => entry.show_on.site).map(entry => <li class:list={[
+          'relative last:border-l-0 group',
+          'duration-200 transition-all',
+        ]}>
+          <span class="absolute -left-2.25 top-1.5 size-4 rounded-full bg-base02 ring-1 ring-base03">
+            <span class="absolute inset-1 rounded-full bg-base03 z-10 group-hover:bg-base07 transition-all duration-200" />
+          </span>
+          <Entry {...entry} class='mt-5'/>
+        </li>)}
+      </ul>
+    </div>
+    <div class="mx-auto w-fit mt-16 md:mt-0">
+      <h3 class='text-base05 text-2xl font-bold font-headers mt-5 mb-1 text-center'>
+        Education
+      </h3>
+      <ul class="group/entries relative before:absolute before:-left-px before:top-3.5 before:bottom-20 before:w-px before:bg-base02">
+        {...Education.config.filter(entry => entry.show_on.site).map(entry => <li class:list={[
+          'relative last:border-l-0 group ',
+          'duration-200 transition-all',
+        ]}>
+          <span class="absolute -left-2.25 top-1.5 size-4 rounded-full bg-base02 ring-1 ring-base03">
+            <span class="absolute inset-1 rounded-full bg-base03 z-10 group-hover:bg-base07 transition-all duration-200" />
+          </span>
+          <Entry {...entry} class='mt-5'/>
+        </li>)}
+      </ul>
+    </div>
+  </div>
+</Section>

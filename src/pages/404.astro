@@ -1,0 +1,20 @@
+---
+import Layout from '#src/layouts/main.astro';
+---
+
+<Layout title='404 Not found' header={false} footer={false} class='bg-base00'>
+  <div class="flex flex-col items-center justify-center h-full w-full">
+    <h1 class="w-full text-center font-headers text-4xl block">
+      404: Not found
+    </h1>
+    <p class="block">
+      This page could not be found... :(
+    </p>
+    <p class="block">
+      All there is left to do is <a class:list={[
+        'hover:underline text-base0E hover:text-base07',
+        'transition-all duration-200'
+      ]} href="/">go back main page</a>.
+    </p>
+  </div>
+</Layout>

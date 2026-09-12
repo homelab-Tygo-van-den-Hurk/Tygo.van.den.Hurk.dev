@@ -1,0 +1,20 @@
+---
+import ContactSection from '#src/sections/contact.astro';
+import Layout from '#src/layouts/main.astro';
+import '#src/styles/global.css';
+---
+<Layout header={false} footer={false}>
+  <div class="flex h-full w-full flex-col items-center justify-center gap-8">
+    <div class="w-full">
+      <ContactSection />
+    </div>
+    <div style="margin-top: 30px;">
+      <p class="mx-auto w-fit text-justify">
+        If this is not where you wanted to go, then you can <a href="/"
+        class="text-base0D transition-all duration-200 hover:text-base07 hover:underline">
+          visit the main page
+        </a>.
+      </p>
+    </div>
+  </div>
+</Layout>

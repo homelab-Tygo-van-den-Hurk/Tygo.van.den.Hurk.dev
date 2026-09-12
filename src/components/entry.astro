@@ -1,0 +1,66 @@
+---
+import { differenceInMonths } from 'date-fns';
+import { differenceInYears } from 'date-fns';
+import { Entry as Config } from '#src/config';
+import * as zod from 'zod';
+
+/** a non-breakable space. */
+export const nbsp = '\u00A0' as const;
+
+const props = Config.schema.parse(Astro.props);
+
+/** The type of the properties passed to this component. */
+export type Props = Config.Type;
+
+const years = differenceInYears(props.end_date, props.start_date);
+const yearsStr = (() => {
+  if (years === 0) return '';
+  if (years === 1) return `1${nbsp}year`;
+  else return `${years}${nbsp}years`;
+})();
+
+const months = differenceInMonths(props.end_date, props.start_date) - years * 12;
+const monthsStr = (() => {
+  if (months === 0) return '';
+  if (months === 1) return `1${nbsp}month`;
+  else return `${months}${nbsp}months`;
+})();
+
+const duration = (() => {
+  if (years === 0 && months === 0) return '';
+  if (years === 0) return `(${monthsStr})`;
+  if (months === 0) return `(${yearsStr})`;
+  return `(${yearsStr},${nbsp}${monthsStr})`;
+})();
+
+/** Converts a month's index to a string, */
+export const monthsMap = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+] as const;
+
+const from = (() => {
+  const fromMonth = monthsMap[props.start_date.getMonth()];
+  const fromYear = props.start_date.getFullYear();
+  return `${fromMonth} ${fromYear}`;
+})();
+
+const till = (() => {
+  const same = props.end_date.getTime() === Config.TODAY.getTime();
+  if (same) return 'Present';
+  const tillMonth = monthsMap[props.end_date.getMonth()];
+  const tillYear = props.end_date.getFullYear();
+  return `${tillMonth} ${tillYear}`;
+})();
+---
+
+<div class=`relative group ${props['class']}`>
+  <div class="ml-5 transition-all duration-200 group-hover:translate-x-1.5">
+    <h4 class="block font-semibold text-lg text-base05 group-hover:text-base07 transition-all duration-200">
+      {props.name}
+    </h4>
+    <p class="block uppercase">{props.description}</p>
+    <p class="block">{props.location}</p>
+    <p class="block">{from} - {till} {duration}</p>
+  </div>
+</div>

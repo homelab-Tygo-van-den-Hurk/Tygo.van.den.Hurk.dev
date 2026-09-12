@@ -1,0 +1,24 @@
+---
+/** The properties the `Footer` accepts. */
+export interface Props {
+  /** CSS class names to add to the main container as well */
+  class?: string;
+}
+
+const { class: classNames = "" } = Astro.props as Props;
+---
+<footer id='footer' class=`bg-base00 ${classNames}`>
+  <div class="w-full bg-base01 p-4 mt-16">
+    <div class='w-[90%] max-w-4xl mx-auto'>
+      <section id='copyright'>
+        <p class="text-center">
+          <span>Copyright &copy; 2023-{new Date(Date.now()).getFullYear()}</span>
+          <span class="mx-2 hidden xs:inline">&middot;</span>
+          <span class="block xs:inline">Tygo&nbsp;van&nbsp;den&nbsp;Hurk</span>
+          <span class="mx-2 hidden sm:inline">&middot;</span>
+          <span class="block sm:inline">All&nbsp;rights&nbsp;reserved</span>
+        </p>
+      </section>
+    </div>
+  </div>
+</footer>

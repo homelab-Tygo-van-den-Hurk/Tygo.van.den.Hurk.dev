@@ -1,0 +1,70 @@
+---
+import HeadShot from '#repo/public/head-shot.jpg';
+import GitHub from '#repo/public/icons/github.svg';
+import Linkedin from '#repo/public/icons/linkedin.svg';
+import { Picture } from 'astro:assets';
+
+/** The properties the `Header` accepts. */
+export interface Props {
+  /** CSS class names to add to the main container as well */
+  class?: string;
+}
+
+const { class: classNames = "" } = Astro.props as Props;
+---
+
+<header class=`w-full pb-10 bg-base00 ${classNames}`>
+  <div class='bg-base01'>
+    <div class="w-[90%] max-w-4xl mx-auto relative md:grid grid-cols-[35%_65%]">
+      <div class="hidden md:block relative pr-4">
+        <Picture
+          src={HeadShot}
+          alt="My profile picture."
+          formats={['avif', 'webp']}
+          loading="lazy"
+          fetchpriority="low"
+          class:list={[
+            'rounded-lg ml-auto relative top-10 bg-base02 object-cover',
+            'w-40 h-60 md:w-45 lg:w-50 xl:w-60 xl:object-[50%_20%]'
+          ]}
+        />
+      </div>
+      <div class="md:relative pt-10 md:pt-0 md:top-10 flex items-center w-full py-6">
+        <div class="w-full">
+          <h1 class="text-base05 text-5xl w-full block font-headers font-bold">
+            Tygo <span class="inline md:hidden lg:inline">van den</span>
+            <span class="hidden md:inline lg:hidden">v.d.</span> Hurk
+          </h1>
+          <p class='mt-1 text-xl capitalize ml-1'>
+            <a href="https://redirects.tygo.van.den.hurk.dev/github/personal" class="inline">
+              <GitHub class:list={[
+                "w-6 inline mx-1 text-base04 hover:text-base05",
+                "transition-all duration-200"
+              ]}/>
+            </a>
+            <a href="https://redirects.tygo.van.den.hurk.dev/linkedin" class="inline">
+              <Linkedin class:list={[
+                "w-6 inline mx-1 text-base04 hover:text-base05",
+                "transition-all duration-200"
+              ]}/>
+            </a>
+            <span class="ml-2 inline-block translate-y-0.5">
+            Software Engineer
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <Picture src={HeadShot}
+      alt="My profile picture."
+      formats={['avif', 'webp']}
+      loading="lazy" fetchpriority="low"
+      class:list={[
+        'rounded-lg w-56 h-auto bg-base02 object-cover mx-auto', 
+        'block md:hidden my-12'
+      ]}
+    />
+  </div>
+</header>

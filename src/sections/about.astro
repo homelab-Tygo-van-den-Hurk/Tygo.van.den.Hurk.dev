@@ -1,0 +1,13 @@
+---
+import Section from '#src/components/section.astro';
+export interface Props { class?: string; }
+---
+<Section id='about' title='About' class={Astro.props.class}>
+  <p class="mx-auto w-fit text-justify">
+    When I was six years old, I bought my own iPod, I had saved all my money from
+    my allowance and my birthday. That is when my love, passion, and interest in
+    tech was born. Ever since, it has only grown. Today I'm a student at the TU/e,
+    studying Computer Science and Engineering, learning about and handling what I
+    love most: technology.
+  </p>
+</Section>
