@@ -340,11 +340,23 @@
       weight: "bold",
       heading(level: 3, {
         metadata(instance.repo);
-        text(fill: rgb(colors.base0D), link(
-          "https://github.com/" + instance.user,
-          if lower(instance.user) == "tygo-van-den-hurk" { "Tygo" } else { instance.user }
-        ));
-        [ \/ ];
+        if lower(instance.user) != "tygo-van-den-hurk" { 
+          text(fill: rgb(colors.base0D), link(
+            "https://github.com/" + instance.user,
+            if lower(instance.user) == "tygo-van-den-hurk" {
+              "Personal"
+            } else if lower(instance.user) == "homelab-tygo-van-den-hurk" {
+              "HomeLab"
+            } else if lower(instance.user) == "school-tygo-van-den-hurk" {
+              "School"
+            } else if lower(instance.user) == "legacy-tygo-van-den-hurk" {
+              "Legacy"
+            } else {
+              instance.user
+            }
+          ));
+          [ \/ ];
+        }
         text( fill: rgb(colors.base0D), link(
           "https://github.com/" + instance.user + "/" + instance.repo,
           instance.repo

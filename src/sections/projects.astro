@@ -20,15 +20,24 @@ export interface Props { class?: string; }
         'shadow-xs  shadow-black/20 hover:shadow-black/30 hover:shadow-md',
       ]}>
         <h3 class="mb-3 text-2xl font-semibold tracking-tight font-headers leading-8">
-          <a href={`https://github.com/${repository.user}`} tabindex="-1"
-          class="text-base0D hover:underline transition-all duration-200 hover:text-base07">
-            {(() => {
-              const me = "Tygo-van-den-Hurk" as const;
-              if (repository.user === me) return "Tygo";
-              else return repository.user;
-            })()}
-          </a>
-          &ThickSpace;/&ThickSpace;
+          {"tygo-van-den-hurk" !== repository.user.toLowerCase() && <span>
+              <a href={`https://github.com/${repository.user}`} tabindex="-1"
+              class="text-base0D hover:underline transition-all duration-200 hover:text-base07">
+                {(() => {switch (repository.user.toLowerCase()) {
+                  case "tygo-van-den-hurk": 
+                    return "Personal";
+                  case "homelab-tygo-van-den-hurk": 
+                    return "HomeLab";
+                  case "school-tygo-van-den-hurk":
+                    return "School";
+                  case "legacy-tygo-van-den-hurk":
+                    return "Legacy";
+                  default:
+                    return repository.user;
+                }})()}
+              </a>
+              &ThickSpace;/&ThickSpace;
+          </span>}
           <a href={`https://github.com/${repository.user}/${repository.repo}`} tabindex="-1"
           class="text-base0D hover:underline transition-all duration-200 hover:text-base07">
             {repository.repo}
