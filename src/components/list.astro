@@ -1,0 +1,48 @@
+---
+export interface Props {
+  /** The items to display. */
+  items: string[];
+  /** The amount visible by default. */
+  amount?: number;
+  /** The name of the details tag. */
+  name?: string;
+}
+
+const {
+  items,
+  amount = 5,
+  name,
+} = Astro.props as Props;
+
+const visible = items.slice(0, amount);
+const rest = items.slice(amount);
+---
+
+<div>
+  {visible.map(item => (
+    <div class="list-item list-outside">
+      {item}
+    </div>
+  ))}
+  {rest.length > 0 && (
+    <details name={name} class="group flex flex-col">
+      <summary class:list={[
+          'order-1 group-open:order-2 list-none cursor-pointer',
+          'hover:text-base07 transition-all duration-200 w-fit',
+          'hover:underline text-base0D mt-6',
+        ]}>
+        <span class="group-open:hidden w-fit">
+          Read More...
+        </span>
+        <span class="hidden group-open:inline w-fit">
+          Read Less...
+        </span>
+      </summary>
+      {rest.map(item => (
+        <div class="order-1 list-item list-outside">
+          {item}
+        </div>
+      ))}
+    </details>
+  )}
+</div>
