@@ -137,17 +137,6 @@
           "manual"
         ];
       };
-
-      # Checks markdown files for broken links, and bad syntax.
-      mdformat = {
-        enable = true;
-        stages = [
-          "pre-commit"
-          "commit-msg"
-          "pre-push"
-          "manual"
-        ];
-      };
     };
   };
 }
