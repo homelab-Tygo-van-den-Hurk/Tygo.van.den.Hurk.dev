@@ -1,5 +1,5 @@
 {
-  description = "My redirection pages configured from YAML.";
+  description = "My personal website configured from YAML.";
 
   # A collection of packages for the Nix package manager
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
