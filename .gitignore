@@ -1,3 +1,13 @@
+# Nix' results
+result
+result-*
+
+# .direnv
+.direnv
+
+# generated pre commit hooks
+.pre-commit-config.yaml
+
 # build output
 dist/
 
