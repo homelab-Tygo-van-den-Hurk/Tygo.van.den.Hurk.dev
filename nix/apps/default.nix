@@ -1,12 +1,16 @@
-{ ... }:
 {
   perSystem =
-    { config, self', pkgs, ... }:
+    {
+      config,
+      self',
+      pkgs,
+      ...
+    }:
     {
       apps.default = config.apps.dev;
 
       # NPM compatibility
-      
+
       apps.dev = with pkgs; {
         type = "app";
         program = writeShellApplication {

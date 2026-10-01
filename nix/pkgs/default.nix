@@ -5,10 +5,10 @@
   ];
 
   perSystem =
-    { 
-      config, 
+    {
+      config,
       pkgs,
-      ... 
+      ...
     }:
     {
       packages = {
