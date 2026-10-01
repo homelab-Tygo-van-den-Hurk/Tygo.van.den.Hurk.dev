@@ -1,57 +1,53 @@
-> This repository is used to construct my personal websites. This includes the frontend, backend, assets and redirect server.
-
-
-<br>
 <div align="center">
-    <!--~ Repository CI/CD ~-->
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/actions/workflows/deploy-github-pages.yml">
-        <img src="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/workflows/Deploy%20GitHub%20Pages/badge.svg?style=flat" alt="GitHub deployment status" />
-    </a>
-    <!--~ Repository Statistics ~-->
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/graphs/contributors">
-        <img src="https://img.shields.io/github/contributors/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="Contributors"/>
-    </a>
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="The Eclipse Public License v2.0 badge" />
-    </a>
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/commit">
-        <img src="https://badgen.net/github/commits/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="GitHub commits" />
-    </a>
-     <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/commit">
-        <img src="https://badgen.net/github/last-commit/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="GitHub latest commit" />
-    </a>
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/network/">
-        <img src="https://badgen.net/github/forks/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="GitHub forks" />
-    </a>
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/">
-        <img src="https://img.shields.io/github/languages/count/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="amount of languages in the repository" />
-    </a>   
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/stargazers">
-        <img src="https://img.shields.io/github/stars/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="amount of stars" />
-    </a>
-    <!--~ Repository Updates ~-->
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/pulse">
-        <img src="https://img.shields.io/github/created-at/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="created at badge" />
-    </a>
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/release">
-        <img src="https://img.shields.io/github/release/homelab-Tygo-van-den-Hurk/personal-website?style=flat&display_name=release" alt="newest release" />
-    </a>
-    <a href="https://github.com/homelab-Tygo-van-den-Hurk/personal-website/">
-        <img src="https://img.shields.io/github/repo-size/homelab-Tygo-van-den-Hurk/personal-website?style=flat" alt="the size of the repository" />
-    </a>   
+  <br>
+  <a href="public/head-shot.jpg">
+    <picture>
+      <img src="public/head-shot.jpg" height="300px" alt="Tygo van den Hurk">
+    </picture>
+  </a>
+  <br>
+  <br>
+  <!--~###################################~-->
+  <!--~####    Open issues and PRs    ####~-->
+  <!--~###################################~-->
+  <a href="https://github.com/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/issues?q=is%3Aissue%20state%3Aopen%20label%3Afix">
+    <picture>
+      <source srcset="https://img.shields.io/github/issues/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/fix?style=flat&labelColor=eff1f5&color=5278c5&logoColor=5E2751&label=Bug%20Reports" media="(prefers-color-scheme: light)" />
+      <img src="https://img.shields.io/github/issues/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/fix?style=flat&labelColor=303446&color=789ee8&logoColor=8F5C86&label=Bug%20Reports" alt="open bug reports" />
+    </picture>
+  </a>
+  <a href="https://github.com/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/issues?q=is%3Aissue%20state%3Aopen%20label%3Afeat">
+    <picture>
+      <source srcset="https://img.shields.io/github/issues/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/feat?style=flat&labelColor=eff1f5&color=5278c5&logoColor=5E2751&label=Feature%20Requests" media="(prefers-color-scheme: light)" />
+      <img src="https://img.shields.io/github/issues/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/feat?style=flat&labelColor=303446&color=789ee8&logoColor=8F5C86&label=Feature%20Requests" alt="open feature requests" />
+    </picture>
+  </a>
+  <br>
+  <!--~###################################~-->
+  <!--~####     Repository Stats      ####~-->
+  <!--~###################################~-->
+  <a href="./LICENSE">
+    <picture>
+      <source srcset="https://img.shields.io/github/license/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev?style=flat&labelColor=eff1f5&color=5278c5&logoColor=5E2751&label=Licence" media="(prefers-color-scheme: light)" />
+      <img src="https://img.shields.io/github/license/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev?style=flat&labelColor=303446&color=789ee8&logoColor=8F5C86&label=Licence" alt="The Repository License badge" />
+    </picture>
+  </a>
+  <a href="https://github.com/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/stargazers">
+    <picture>
+      <source srcset="https://img.shields.io/github/stars/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev?style=flat&labelColor=eff1f5&color=5278c5&label=Stars" media="(prefers-color-scheme: light)" />
+      <img src="https://img.shields.io/github/stars/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev?style=flat&labelColor=303446&color=789ee8&label=Stars" alt="amount of stars on GitHub" />
+    </picture>
+  </a>
+  <a href="https://github.com/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev/releases">
+  <picture>
+      <source srcset="https://img.shields.io/github/release/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev?style=flat&display_name=release&label=Release&labelColor=eff1f5&color=5278c5" media="(prefers-color-scheme: light)" />
+      <img src="https://img.shields.io/github/release/homelab-Tygo-van-den-Hurk/Tygo.van.den.Hurk.dev?style=flat&display_name=release&label=Release&labelColor=303446&color=789ee8" alt="newest release" />
+  </picture>
+  </a>
+  <br>
 </div>
 <br>
 
-# Personal Website
+# [Tygo.van.den.Hurk.dev](https://Tygo.van.den.Hurk.dev/)
 
-- [Personal Website](#personal-website)
-  - [Overview](#overview)
-  - [How do Develop](#how-do-develop)
-
-## Overview 
-
-I wanted something simple that when filling in a YAML form would auto deploy my website filled with my experience and name. I wanted that same thing to also generate a CV based on that same information. That is what this is. After filling in [your curriculum vitae](./curriculum-vitae.yaml) and pushing to Github, automations will run that will build the webpage, and CV for you and deploy it on GitHub pages, all for free.
-
-## How do Develop
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md#how-to-develop) for more information.
+I wanted something simple where you'd fill in a YAML form to configure the website. I wanted it to be static with no client JS, and rebuild weekly to be up to date. This is the result of that idea. The site is configured using the YAML files in the config directory, and it is hosted on cloudflare pages for speed reasons. You can visit it at: [Tygo.van.den.Hurk.dev](https://Tygo.van.den.Hurk.dev/).
