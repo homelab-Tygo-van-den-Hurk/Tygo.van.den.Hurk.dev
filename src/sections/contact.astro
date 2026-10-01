@@ -1,5 +1,9 @@
 ---
 import Section from '#src/components/section.astro';
+
+const placeholder = `Hello there...\n
+It's over Anakin. I have the high ground.`;
+
 export interface Props { class?: string; }
 ---
 <Section id='contact' title='contact' class={Astro.props.class}>
@@ -11,34 +15,40 @@ export interface Props { class?: string; }
     class='hover:underline text-base0D hover:text-base07 transition-all duration-200'
     href="https://redirects.tygo.van.den.hurk.dev/github/personal">GitHub</a>.
   </p>
-  <form class="md:grid grid-cols-2 p-4 gap-12"
-    method="POST" action="https://formspree.io/f/xanoylwn">
-    <div>
-      <label for="email" class="block text-center w-full mt-6 mb-1">
-        Email
-      </label>
-      <input name="email" autocomplete="email" type="email" required
-        placeholder="o.w.kenobi@www.temple.jedi"
-        class="bg-base01 p-2 w-full rounded-md border border-base02 text-center"
-      />
-      <label for="subject" class="block text-center w-full mt-6 mb-1">
-        Subject
-      </label>
-      <input name="subject" type="text" 
-        placeholder="I have the high ground" required 
-        class="bg-base01 p-2 w-full rounded-md border border-base02 text-center"
-      />   
+  <form method="POST" action="https://formspree.io/f/xanoylwn">
+    <div class="md:grid grid-cols-2 p-4 gap-12">
+      <div>
+        <label for="message"
+        class="block text-center w-full mt-6 mb-1">
+          Message
+        </label>
+        <textarea name="message" required id="message"
+          class="bg-base01 p-2 w-full rounded-md border border-base02 min-h-56"
+          placeholder={placeholder}/>
+      </div>
+      <div>
+        <label for="email" class="block text-center w-full mt-6 mb-1">
+          Email
+        </label>
+        <input name="email" autocomplete="email" type="email" required
+          placeholder="o.w.kenobi@www.temple.jedi" id="email"
+          class="bg-base01 p-2 w-full rounded-md border border-base02 text-center"
+        />
+        <label for="subject" class="block text-center w-full mt-6 mb-1">
+          Subject
+        </label>
+        <input name="subject" type="text" id="subject"
+          placeholder="I have the high ground" required 
+          class="bg-base01 p-2 w-full rounded-md border border-base02 text-center"
+        />
+        <button type="submit" class:list={[
+          "mt-12 w-full p-2 rounded-md border border-base02 bg-base0D",
+          "hover:bg-base07 transition-all duration-200 text-base01",
+          "cursor-pointer hover:-translate-y-1"
+        ]}>
+          Send
+        </button>
+      </div>
     </div>
-    <div>
-      <label for="message"
-      class="block text-center w-full mt-6 mb-1">
-        Message
-      </label>
-      <textarea name="message" required
-        class="bg-base01 p-2 w-full rounded-md border border-base02 min-h-32"
-        placeholder=`Hello there...
-
-It's over Anakin. I have the high ground.`/>
-    </div> 
   </form>
 </Section>
